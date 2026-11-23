@@ -1,0 +1,46 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "King of Fighters '99, The",
+    "id": "SLUS-01332",
+    "boot_exe": "SLUS_013.32"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "USA",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "King of Fighters '99, The (USA).cue",
+    "bin_name": "King of Fighters '99, The (USA) (Track 1).bin",
+    "track_counts": [
+      2
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 248601696,
+      "md5": "e546c57768b5e2c00ce960175dfc0a0d",
+      "sha1": "4407cf9c9dbf41c1d3bcc0f18b425e0e5b02d18b",
+      "crc32": "f8971582"
+    },
+    "disc_fp": "ba853c90af97129b4ce7f31a5b22be9f9fef91043f9f33d406cea4842f46f7eb"
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x80053630",
+    "text_size": "0x000DD000",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 1219,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

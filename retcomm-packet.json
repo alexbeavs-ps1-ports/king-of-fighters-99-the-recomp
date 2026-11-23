@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "king-of-fighters-99-the-psx",
+  "name": "King of Fighters '99, The",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "king-of-fighters-99-the-recomp",
+  "rom_identity": {
+    "crc32": [
+      "f8971582"
+    ],
+    "md5": [
+      "e546c57768b5e2c00ce960175dfc0a0d"
+    ],
+    "sha1": [
+      "4407cf9c9dbf41c1d3bcc0f18b425e0e5b02d18b"
+    ],
+    "disc_serials": [
+      "SLUS-01332"
+    ],
+    "sizes": [
+      248601696
+    ],
+    "filenames": [
+      "King of Fighters '99, The (USA).cue",
+      "King of Fighters '99, The (USA) (Track 1).bin"
+    ],
+    "track_counts": [
+      2
+    ],
+    "disc_fps": [
+      "ba853c90af97129b4ce7f31a5b22be9f9fef91043f9f33d406cea4842f46f7eb"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH1001.BIN",
+    "profile": "SCPH1001",
+    "crc32": [
+      "37157331"
+    ],
+    "md5": [
+      "924e392ed05558ffdb115408c263dccf"
+    ],
+    "sha1": [
+      "10155d8d6e6e832d6ea66db9bc098321fb5e8ebf"
+    ],
+    "sha256": [
+      "71af94d1e47a68c11e8fdb9f8368040601514a42a5a399cda48c7d3bff1e99d3"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH1001.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/king-of-fighters-99-the-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "king-of-fighters-99-the-*-windows-x64.zip",
+      "linux-x64": "king-of-fighters-99-the-*-linux-x64.zip",
+      "macos-arm64": "king-of-fighters-99-the-*-macos-arm64.zip",
+      "macos-x64": "king-of-fighters-99-the-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "king_of_fighters_99_the.exe",
+    "linux": "king_of_fighters_99_the",
+    "macos": "king_of_fighters_99_the"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/king-of-fighters-99-the-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

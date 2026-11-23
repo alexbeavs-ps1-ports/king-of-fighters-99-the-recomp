@@ -1,0 +1,13 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "King of Fighters '99, The",
+  "system": "PS1",
+  "type": "recomp",
+  "toolchain": "psxrecomp",
+  "status": "exploring",
+  "project": "king-of-fighters-99-the-recomp",
+  "original": {
+    "region": "USA",
+    "serial": "SLUS-01332"
+  }
+}

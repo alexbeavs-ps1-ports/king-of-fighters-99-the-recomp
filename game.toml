@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "King of Fighters '99, The"
+id = "SLUS-01332"
+players = 1
+exe = "disc/SLUS_013.32"
+disc = "disc/King of Fighters '99, The (USA).cue"
+discs = ["disc/King of Fighters '99, The (USA).cue"]
+disc_serials = ["SLUS-01332"]
+load_address = "0x80010000"
+entry_pc = "0x80053630"
+text_size = "0x000DD000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "King of Fighters '99, The (USA) (Track 1).bin"
+cue_name = "King of Fighters '99, The (USA).cue"
+boot_exe = "SLUS_013.32"
+known_sizes = [248601696]
+known_md5 = [
+  "e546c57768b5e2c00ce960175dfc0a0d",
+]
+known_sha1 = [
+  "4407cf9c9dbf41c1d3bcc0f18b425e0e5b02d18b",
+]
+known_crc32 = [
+  "f8971582",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "King of Fighters '99, The Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 2
+required_disc_fp = "ba853c90af97129b4ce7f31a5b22be9f9fef91043f9f33d406cea4842f46f7eb"
